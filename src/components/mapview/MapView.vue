@@ -11,7 +11,7 @@
   </div>
 
   <div 
-    v-else
+    v-show="isUserlocationReady"
     class="map-container"
     ref="mapElement"
   />
