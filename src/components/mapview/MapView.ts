@@ -24,6 +24,11 @@ export default defineComponent({
                 zoom: 15, 
             
             });
+
+            const myLocationMarker = new Mapboxgl.Marker()
+                .setLngLat( userLocation.value )
+                .addTo( map )
+        
         } 
             
 
