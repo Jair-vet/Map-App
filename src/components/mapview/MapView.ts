@@ -1,7 +1,7 @@
 import { defineComponent, ref, onMounted, watch } from 'vue';
-import { usePlacesStore } from '../../composables/usePlacesStore';
-import Mapboxgl from 'mapbox-gl';
+import Mapboxgl from 'mapbox-gl';;
 
+import { usePlacesStore, useMapStore } from '@/composables';
 
 
 export default defineComponent({
@@ -10,6 +10,7 @@ export default defineComponent({
 
         const mapElement = ref<HTMLDivElement>()
         const { userLocation, isUserlocationReady } =  usePlacesStore()
+        const { setMap } = useMapStore()
 
         const initMap = async () => {
             if ( !mapElement.value ) throw new Error('Div Element no existe')
@@ -37,6 +38,9 @@ export default defineComponent({
                 .setLngLat( userLocation.value )
                 .setPopup( myLocationPopup )
                 .addTo( map )
+            
+            // Establecer el mapa en VUEx
+            setMap( map )
         
         } 
             
