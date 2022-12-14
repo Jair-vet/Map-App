@@ -6,7 +6,7 @@
             <h5>Nombre del Lugar</h5>
             <p>Esse suscipit sequi tenetur nulla! Nobis molestias enim</p>
             <div align="right">
-                <button class="btn btn-outline-primary">
+                <button class="btn btn-outline-primary btn-sm">
                     Direcciones
                 </button>
             </div>
@@ -17,7 +17,7 @@
             <h5>Nombre del Lugar</h5>
             <p>Esse suscipit sequi tenetur nulla! Nobis molestias enim</p>
             <div align="right">
-                <button class="btn btn-outline-primary">
+                <button class="btn btn-outline-primary btn-sm">
                     Direcciones
                 </button>
             </div>
@@ -37,7 +37,11 @@ li {
 
 p{
     color: rgb(3, 3, 3);
-    font-size: small;
+    font-size: 10px;
+}
+
+h5 {
+    font-size: 15px !important;
 }
 
 </style>
