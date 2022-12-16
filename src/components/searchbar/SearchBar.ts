@@ -12,7 +12,7 @@ export default defineComponent({
     setup() {
 
         const debounceTimeout = ref();
-        const debouncedValue = ref('hola')
+        const debouncedValue = ref('')
 
         const { searchPlacesByTerm } = usePlacesStore()
 
