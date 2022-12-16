@@ -8,7 +8,7 @@ export default defineComponent({
   setup() {
 
     const { isLoadingPlaces, places, userLocation } = usePlacesStore();
-    const { map, setPlaceMarkers, /* getRouteBetweenPoints */ } = useMapStore();
+    const { map, setPlaceMarkers, getRouteBetweenPoints } = useMapStore();
 
     const activePlace = ref('');
 
@@ -44,7 +44,7 @@ export default defineComponent({
         const start: [number, number] = [startLng, startLat];
         const end  : [number, number] = [lng, lat];
 
-        // getRouteBetweenPoints( start, end );
+        getRouteBetweenPoints( start, end );
       }
     }
   }
